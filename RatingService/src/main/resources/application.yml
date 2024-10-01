@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: RATING-SERVICE
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://192.168.178.233:3307/demomicroservices
+    username: juno
+    password: Juno@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8012
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    # instance-id: unique-instance-id  # Uncomment if you want to set a specific instance ID
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+# management:
+#   endpoints:
+#     web:
+#       exposure:
+#         include: health,info
