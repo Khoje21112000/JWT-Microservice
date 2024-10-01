@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: JWT-SERVICE
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  datasource:
+    url: jdbc:mysql://192.168.178.219:3307/demomicroservices3
+    username: juno
+    password: Juno@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8055
+
+application:
+  security:
+    jwt:
+      secret-key: e486b5f3f1cb640c6614104aae0031489a23e66ea608167dab53848cd4959172
+      access-token-expiration: 3600000
+      refresh-token-expiration: 86400000
